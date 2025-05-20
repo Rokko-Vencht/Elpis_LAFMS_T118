@@ -5,6 +5,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const viewButtons = document.querySelectorAll('.lf-view-details-btn');
     console.log('Found view buttons:', viewButtons.length);
     
+    // Log each button's attributes
+    viewButtons.forEach((button, index) => {
+        console.log(`Button ${index + 1} attributes:`, {
+            transactionId: button.getAttribute('data-transaction-id'),
+            itemName: button.getAttribute('data-item-name'),
+            reportStatus: button.getAttribute('data-report-status'),
+            responseStatus: button.getAttribute('data-response-status'),
+            responseId: button.getAttribute('data-response-id')
+        });
+    });
+    
     const closeButtons = document.querySelectorAll('#lf-close, #lf-close2, #lf-close-response, #lf-close-view-response');
     console.log('Found close buttons:', closeButtons.length);
     
@@ -175,15 +186,11 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Response buttons logic
             const addResponseBtnCont = modalContainer.querySelector('.lf-add-response-btn-cont');
-            if (currentUserId == data.pubId) {
-                // Publisher can't add responses
-                if (addResponseBtnCont) addResponseBtnCont.style.display = 'none';
-                if (viewResponseBtnCont) viewResponseBtnCont.style.display = 'none';
-            } else {
-                // Non-publisher response options
-                if (addResponseBtnCont) addResponseBtnCont.style.display = (status === 'pending') ? 'block' : 'none';
-                if (viewResponseBtnCont) viewResponseBtnCont.style.display = (status === 'responded') ? 'block' : 'none';
-            }
+            // Show View Response button only if responseStatus is exactly 'responded' (case-insensitive)
+            const hasResponse = (status === 'responded');
+            // All users can see the view response button if hasResponse
+            if (addResponseBtnCont) addResponseBtnCont.style.display = 'none';
+            if (viewResponseBtnCont) viewResponseBtnCont.style.display = hasResponse ? 'block' : 'none';
 
             // Always wire up the View Response button if it is visible
             if (viewResponseBtnCont && viewResponseBtnCont.style.display === 'block') {
@@ -197,13 +204,12 @@ document.addEventListener('DOMContentLoaded', function() {
                             console.error('View response modal not found');
                             return;
                         }
-                        
-                        viewModal.querySelector('#view-response-id').textContent = data.responseId;
-                        viewModal.querySelector('#view-location-found').textContent = data.foundlocRespo;
-                        viewModal.querySelector('#view-storage-location').textContent = data.storelocRespo;
-                        viewModal.querySelector('#view-item-description').textContent = data.otherInfo;
-                        viewModal.querySelector('#view-response-by').textContent = data.userRespoName;
-                        
+                        // Always use the latest data from the button attributes if available
+                        viewModal.querySelector('#view-response-id').textContent = data.responseId || '';
+                        viewModal.querySelector('#view-location-found').textContent = data.foundlocRespo || '';
+                        viewModal.querySelector('#view-storage-location').textContent = data.storelocRespo || '';
+                        viewModal.querySelector('#view-item-description').textContent = data.otherInfo || '';
+                        viewModal.querySelector('#view-response-by').textContent = data.userRespoName || '';
                         viewModal.classList.add('show');
                         document.body.style.overflow = 'hidden';
                     };
@@ -289,6 +295,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Fetch and update response data
         fetchResponseData(data.transactionId);
+
+        console.log('data.responseStatus:', data.responseStatus);
+        console.log('status:', status);
+        console.log('viewResponseBtnCont:', viewResponseBtnCont);
     }
     
     function fetchResponseData(transactionId) {

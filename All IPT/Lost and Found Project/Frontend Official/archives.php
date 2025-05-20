@@ -16,6 +16,7 @@ include '../includes/db.php';
         // Make sure the currentUserId is properly defined
         window.currentUserId = "<?php echo isset($_SESSION['user_id']) ? $_SESSION['user_id'] : ''; ?>";
     </script>
+    <script src="js/archives.js"></script>
     <style>
         .lf-modal-container, .lf-modal-container-f, .lf-modal-container-view-response {
             display: none;
@@ -251,7 +252,8 @@ include '../includes/db.php';
                            r.response_id,
                            r.foundloc_respo,
                            r.storeloc_respo,
-                           r.other_info
+                           r.other_info,
+                           t.response_status AS response_status
                            FROM transaction_table t 
                            JOIN item_table i ON t.item_id = i.item_id 
                            JOIN category_table c ON i.categ_id = c.categ_id
@@ -356,16 +358,13 @@ include '../includes/db.php';
                 <div class="lf-modal"> 
                     <div class="lf-form-group-header">
                         <h1>Item Information</h1>
-                        <svg id="lf-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+                        <svg id="lf-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
                     </div>
-
                     <hr>
-                    
                     <div id="lf-info-control">
                         <div id="lf-photo-cont">
                             <img id="lf-item-holder-img" src="" alt="">
                         </div>
-                        
                         <div class="lf-info-details">
                             <div id="lf-form-group">
                                 <p id="lf-item-holder-title">Report Status:</p>
@@ -393,47 +392,24 @@ include '../includes/db.php';
                             </div>
                             <hr>
                         </div>
-
                         <div class="lf-report-section">
-                            <div class="lf-item-holder-title">
-                                Response Section
-                            </div>
-
+                            <div class="lf-item-holder-title">Response Section</div>
                             <div class="lf-report-section-innie"> 
                                 <div class="lf-view-response-btn-cont" style="display:none;">
                                     <button id="lf-view-response-btn"
-                                    style="
-                                            width: 100%;
-                                            height: 50px;
-                                            background: #fff;
-                                            color: black;
-                                            border: 1.5px solid rgb(33, 33, 79);
-                                            border-radius: 8px;
-                                            text-align: center;
-                                            padding-left: 20px;
-                                            cursor: pointer;
-                                            display: flex;
-                                            align-items: center;
-                                            font-size: 16px;
-                                            font-weight: 600;
-                                            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-                                            margin: 0;"
-
-                                        onmouseover="this.style.backgroundColor='rgb(33,33,79)';this.style.color='white'; this.querySelector('i').style.color='white';"
-                                        onmouseout="this.style.backgroundColor='#fff';this.style.color='black'; this.querySelector('i').style.color='rgb(33,33,79)';"
-                                    >
+                                    style="width: 100%; height: 50px; background: #fff; color: black; border: 1.5px solid rgb(33, 33, 79); border-radius: 8px; text-align: center; padding-left: 20px; cursor: pointer; display: flex; align-items: center; font-size: 16px; font-weight: 600; box-shadow: 0 1px 3px rgba(0,0,0,0.08); margin: 0;"
+                                    onmouseover="this.style.backgroundColor='rgb(33,33,79)';this.style.color='white'; this.querySelector('i').style.color='white';"
+                                    onmouseout="this.style.backgroundColor='#fff';this.style.color='black'; this.querySelector('i').style.color='rgb(33,33,79)';">
                                         View Response
                                     </button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div id="lf-form-group-desc" class="lf-desc-box">
                         <div class="lf-desc-label">Description:</div>
                         <div class="lf-desc-content"></div>
                     </div>
-
                 </div>
             </div>
 
@@ -442,16 +418,13 @@ include '../includes/db.php';
                 <div class="lf-modal"> 
                     <div class="lf-form-group-header">
                         <h1>Item Information</h1>
-                        <svg id="lf-close2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+                        <svg id="lf-close2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
                     </div>
-
                     <hr>
-                    
                     <div id="lf-info-control">
                         <div id="lf-photo-cont">
                             <img id="lf-item-holder-img" src="" alt="">
                         </div>
-                        
                         <div class="lf-info-details">
                             <div id="lf-form-group">
                                 <p id="lf-item-holder-title">Report Status:</p>
@@ -496,7 +469,6 @@ include '../includes/db.php';
                             <hr>
                         </div>
                     </div>
-
                     <div id="lf-form-group-desc" class="lf-desc-box">
                         <div class="lf-desc-label">Description:</div>
                         <div class="lf-desc-content"></div>
@@ -509,16 +481,14 @@ include '../includes/db.php';
                 <div class="lf-modal"> 
                     <div class="lf-form-group-header">
                         <h1>Response Details</h1>
-                        <svg id="lf-close-view-response" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+                        <svg id="lf-close-view-response" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
                     </div>
-
                     <div class="lf-form-scrollable-container">
                         <div class="lf-form-content">
                             <div class="lf-response-header">
                                 <div class="lf-response-id-display">Response ID: <span id="view-response-id"></span></div>
                                 <div class="lf-response-by-display">Submitted By: <span id="view-response-by"></span></div>
                             </div>
-
                             <div class="lf-info-control">
                                 <div class="lf-info-details">
                                     <p class="lf-output-title">Location Where Item Was Found:</p>
@@ -587,7 +557,8 @@ include '../includes/db.php';
                         pubName: this.getAttribute('data-pub-name'),
                         userRespoName: this.getAttribute('data-user-respo-name'),
                         claimStatus: this.getAttribute('data-claim-status'),
-                        transactionStatus: this.getAttribute('data-transaction-status')
+                        transactionStatus: this.getAttribute('data-transaction-status'),
+                        responseStatus: this.getAttribute('data-response-status')
                     };
                     
                     // Update modal content
@@ -621,6 +592,8 @@ include '../includes/db.php';
                     // Show the modal (always)
                     modalContainer.classList.add('show');
                     document.body.style.overflow = 'hidden';
+
+                    console.log('Lost item - response status:', reportStatus, 'raw:', itemData.responseStatus);
                 });
             });
             

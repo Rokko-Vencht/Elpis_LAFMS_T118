@@ -119,4 +119,70 @@
     .lf-modal-container-view-response .lf-modal {
         margin-top: 70px;
     }
+}
+
+/* Report Section Styles */
+.lf-report-section {
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.lf-report-section-innie {
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.lf-report-section-innie:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+.lf-report-section .lf-item-holder-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #123458;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 4px solid #123458;
+}
+
+/* Button container styles */
+.lf-view-response-btn-cont,
+.lf-add-response-btn-cont {
+    margin-top: 10px;
+}
+
+#lf-view-response-btn,
+#lf-add-report {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1.5px solid #123458;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #123458;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#lf-view-response-btn:hover,
+#lf-add-report:hover {
+    background-color: #123458;
+    color: #fff;
+}
+
+#lf-view-response-btn i,
+#lf-add-report i {
+    font-size: 18px;
+    transition: color 0.3s ease;
 } 

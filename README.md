@@ -11,6 +11,7 @@ Lostlink: Lost and Found Management System
 
 
 ## Names of Students
+Company: ELPIS
 - Fern Aila Asiñero
 - Khristine Cielo Carretas
 - Robert James Nahial

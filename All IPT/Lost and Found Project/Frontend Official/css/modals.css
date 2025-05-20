@@ -1,0 +1,122 @@
+/* Modal styles - include view response modal */
+.lf-modal-container,
+.lf-modal-container-f,
+.lf-modal-container-response,
+.lf-modal-container-view-response {
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.5);
+    transition: opacity 0.3s ease;
+    z-index: 9999;
+    overflow-y: auto;
+    padding: 90px 20px 20px 20px;
+}
+
+.lf-modal-container.show,
+.lf-modal-container-f.show,
+.lf-modal-container-response.show,
+.lf-modal-container-view-response.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lf-modal {
+    position: relative;
+    background-color: #fff;
+    width: 90%;
+    max-width: 1000px;
+    max-height: calc(100vh - 110px);
+    min-height: 600px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    overflow-y: auto;
+    padding: 0;
+    margin: 20px auto;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Standardize layout for all modal types */
+.lf-modal-container .lf-modal,
+.lf-modal-container-f .lf-modal,
+.lf-modal-container-response .lf-modal,
+.lf-modal-container-view-response .lf-modal {
+    height: calc(85vh - 90px);
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+}
+
+.lf-form-group-header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    padding: 15px 40px;
+    border-bottom: 1px solid #eee;
+    z-index: 10001;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    flex-shrink: 0;
+}
+
+.lf-form-group-header h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#lf-close,
+#lf-close2,
+#lf-close-response,
+#lf-close-view-response {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10002;
+}
+
+#lf-close:hover,
+#lf-close2:hover,
+#lf-close-response:hover,
+#lf-close-view-response:hover {
+    fill: rgb(67, 82, 96);
+}
+
+/* Make modals responsive on smaller screens */
+@media (max-width: 768px) {
+    .lf-modal {
+        width: 95%;
+        margin: 20px auto;
+    }
+    
+    .lf-form-scrollable-container {
+        padding: 15px 20px;
+    }
+    
+    .lf-button-container {
+        padding: 15px 20px;
+    }
+
+    .lf-modal-container .lf-modal,
+    .lf-modal-container-f .lf-modal,
+    .lf-modal-container-response .lf-modal,
+    .lf-modal-container-view-response .lf-modal {
+        margin-top: 70px;
+    }
+} 

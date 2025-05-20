@@ -1,0 +1,8 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^6.9.1",
+        "vlucas/phpdotenv": "*",
+        "google/apiclient": "2.15",
+        "mpdf/mpdf": "^8.2"
+    }
+}

@@ -1,0 +1,201 @@
+#addItemForm {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 32px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background: white;
+}
+
+#addItemForm hr {
+    display: none;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  min-width: 160px;
+  max-width: 220px;
+  margin-right: 16px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0;
+}
+
+.form-group input[type="text"],
+.form-group select,
+.form-group textarea,
+.form-group input[type="file"] {
+  flex: 1;
+  border-radius: 5px;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  max-width: calc(100% - 180px);
+}
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23123458' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  padding-right: 30px;
+}
+
+.form-group input[type="file"] {
+  padding: 8px;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #123458;
+  border-bottom: 2px solid #123458;
+  outline: none;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.radio-options {
+  display: flex;
+  gap: 24px;
+  margin-top: 0;
+}
+
+.radio-options label {
+  min-width: unset;
+  max-width: unset;
+  margin-right: 0;
+  font-weight: 500;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.status-specific-fields {
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid #eee;
+}
+
+.status-specific-fields .form-group {
+  margin-bottom: 15px;
+}
+
+.button-container {
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submit-button {
+  background: #123458;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 32px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(18,52,88,0.07);
+}
+.submit-button:hover:not(:disabled) {
+  background: #0f2d4a;
+}
+.submit-button:disabled {
+  background: #e5e7eb;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+    .content-header {
+        padding: 0 10px;
+    }
+    
+    .content-header h1 {
+        font-size: 1.4rem;
+    }
+    
+    #addItemForm {
+        padding: 5px 0px;
+        max-width: 98vw;
+    }
+    
+    .submit-button {
+        width: 100%;
+        padding: 12px 0;
+    }
+    
+    .form-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .form-group label {
+        min-width: unset;
+        max-width: unset;
+        margin-right: 0;
+        margin-bottom: 6px;
+    }
+    
+    .form-group input[type="text"],
+    .form-group select,
+    .form-group textarea,
+    .form-group input[type="file"] {
+        max-width: 100%;
+    }
+}
+
+.content-header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #123458;
+    border-radius: 10px 10px 0 0;
+    padding: 0 20px;
+    margin-bottom: 0;
+    color: white;
+}
+
+.content-header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+select #foundLocationFound{
+    float: right;
+    justify-self: right;
+}
+
+#main-cont {
+    background-color: white !important;
+    padding: 30px;
+    border-radius: 12px;
+    min-height: 82vh;
+    margin: 30px;
+    margin-left: 280px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+#main-cont.expanded {
+    margin-left: 30px !important;
+}

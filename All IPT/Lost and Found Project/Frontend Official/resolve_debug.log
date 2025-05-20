@@ -1,0 +1,407 @@
+mark_as_resolved.php called at 2025-05-19 04:45:38
+User ID: TX009 X4449
+Raw input: {"transaction_id":"TRNSC 0031"}
+Transaction ID: TRNSC 0031
+User ID: TX009 X4449
+Started database transaction
+Transaction data: Array
+(
+    [transaction_id] => TRNSC 0031
+    [pub_id] => TX009 X4449
+    [report_status] => Lost
+    [claim_status] => 
+)
+
+Comparing user_id: TX009 X4449 with pub_id: TX009 X4449
+Setting transaction_status='Resolved', transaction_date='2025-05-19'
+Successfully updated transaction_date
+Transaction updated successfully as resolved
+Transaction committed to database
+Sending success response: {"success":true,"message":"Item marked as resolved successfully"}
+mark_as_resolved.php completed
+----------------------------------------------
+mark_as_resolved.php called at 2025-05-19 05:27:47
+User ID: TX009 X4449
+Raw input: {"transaction_id":"TRNSC 0029"}
+Transaction ID: TRNSC 0029
+User ID: TX009 X4449
+Started database transaction
+Transaction data: Array
+(
+    [transaction_id] => TRNSC 0029
+    [pub_id] => TX009 X4449
+    [report_status] => Lost
+    [claim_status] => 
+)
+
+Comparing user_id: TX009 X4449 with pub_id: TX009 X4449
+Setting transaction_status='Resolved', transaction_date='2025-05-19'
+Successfully updated transaction_date
+Transaction updated successfully as resolved
+Transaction committed to database
+Sending success response: {"success":true,"message":"Item marked as resolved successfully"}
+mark_as_resolved.php completed
+----------------------------------------------
+mark_as_resolved.php called at 2025-05-19 17:24:37
+User ID: TX009 X4449
+Raw input: {"transaction_id":"TRNSC 0026"}
+Transaction ID: TRNSC 0026
+User ID: TX009 X4449
+Started database transaction
+User info: Array
+(
+    [pub_id] => TX009 X4449
+    [first_name] => Robert James
+    [last_name] => Nahial
+    [email] => 2301101444@student.buksu.edu.ph
+)
+
+Transaction data: Array
+(
+    [transaction_id] => TRNSC 0026
+    [pub_id] => TX009 X4449
+    [report_status] => Lost
+    [claim_status] => 
+    [user_respo] => TX013 X4453
+    [item_name] => Coins and Play money
+    [publisher_email] => 2301101444@student.buksu.edu.ph
+    [publisher_fname] => Robert James
+    [publisher_lname] => Nahial
+)
+
+Setting transaction_status='Resolved', transaction_date='2025-05-19'
+Transaction updated successfully as resolved
+Transaction committed to database
+Sending success response: {"success":true,"message":"Item marked as resolved successfully"}
+mark_as_resolved.php completed
+----------------------------------------------
+mark_as_resolved.php called at 2025-05-19 17:24:42
+User ID: TX009 X4449
+Raw input: {"transaction_id":"TRNSC 0026"}
+Transaction ID: TRNSC 0026
+User ID: TX009 X4449
+Started database transaction
+User info: Array
+(
+    [pub_id] => TX009 X4449
+    [first_name] => Robert James
+    [last_name] => Nahial
+    [email] => 2301101444@student.buksu.edu.ph
+)
+
+Transaction data: Array
+(
+    [transaction_id] => TRNSC 0026
+    [pub_id] => TX009 X4449
+    [report_status] => Lost
+    [claim_status] => 
+    [user_respo] => TX013 X4453
+    [item_name] => Coins and Play money
+    [publisher_email] => 2301101444@student.buksu.edu.ph
+    [publisher_fname] => Robert James
+    [publisher_lname] => Nahial
+)
+
+Setting transaction_status='Resolved', transaction_date='2025-05-19'
+Transaction updated successfully as resolved
+Transaction committed to database
+Sending success response: {"success":true,"message":"Item marked as resolved successfully"}
+mark_as_resolved.php completed
+----------------------------------------------
+mark_as_resolved.php called at 2025-05-19 17:25:06
+User ID: TX009 X4449
+Raw input: {"transaction_id":"TRNSC 0027"}
+Transaction ID: TRNSC 0027
+User ID: TX009 X4449
+Started database transaction
+User info: Array
+(
+    [pub_id] => TX009 X4449
+    [first_name] => Robert James
+    [last_name] => Nahial
+    [email] => 2301101444@student.buksu.edu.ph
+)
+
+Transaction data: Array
+(
+    [transaction_id] => TRNSC 0027
+    [pub_id] => TX009 X4449
+    [report_status] => Found
+    [claim_status] => Claimed
+    [user_respo] => TX013 X4453
+    [item_name] => Phone ni kristia
+    [publisher_email] => 2301101444@student.buksu.edu.ph
+    [publisher_fname] => Robert James
+    [publisher_lname] => Nahial
+)
+
+Setting transaction_status='Resolved', transaction_date='2025-05-19'
+Transaction updated successfully as resolved
+Transaction committed to database
+Sending success response: {"success":true,"message":"Item marked as resolved successfully"}
+mark_as_resolved.php completed
+----------------------------------------------
+mark_as_resolved.php called at 2025-05-19 17:25:14
+User ID: TX009 X4449
+Raw input: {"transaction_id":"TRNSC 0027"}
+Transaction ID: TRNSC 0027
+User ID: TX009 X4449
+Started database transaction
+User info: Array
+(
+    [pub_id] => TX009 X4449
+    [first_name] => Robert James
+    [last_name] => Nahial
+    [email] => 2301101444@student.buksu.edu.ph
+)
+
+Transaction data: Array
+(
+    [transaction_id] => TRNSC 0027
+    [pub_id] => TX009 X4449
+    [report_status] => Found
+    [claim_status] => Claimed
+    [user_respo] => TX013 X4453
+    [item_name] => Phone ni kristia
+    [publisher_email] => 2301101444@student.buksu.edu.ph
+    [publisher_fname] => Robert James
+    [publisher_lname] => Nahial
+)
+
+Setting transaction_status='Resolved', transaction_date='2025-05-19'
+Transaction updated successfully as resolved
+Transaction committed to database
+Sending success response: {"success":true,"message":"Item marked as resolved successfully"}
+mark_as_resolved.php completed
+----------------------------------------------
+mark_as_resolved.php called at 2025-05-19 17:33:04
+User ID: TX009 X4449
+Raw input: {"transaction_id":"TRNSC 0024"}
+Transaction ID: TRNSC 0024
+User ID: TX009 X4449
+Started database transaction
+User info: Array
+(
+    [pub_id] => TX009 X4449
+    [first_name] => Robert James
+    [last_name] => Nahial
+    [email] => 2301101444@student.buksu.edu.ph
+)
+
+Transaction data: Array
+(
+    [transaction_id] => TRNSC 0024
+    [pub_id] => TX009 X4449
+    [report_status] => Lost
+    [claim_status] => 
+    [user_respo] => 
+    [item_name] => White Adapter
+    [publisher_email] => 2301101444@student.buksu.edu.ph
+    [publisher_fname] => Robert James
+    [publisher_lname] => Nahial
+)
+
+Setting transaction_status='Resolved', transaction_date='2025-05-19'
+Transaction updated successfully as resolved
+Transaction committed to database
+Sending success response: {"success":true,"message":"Item marked as resolved successfully"}
+mark_as_resolved.php completed
+----------------------------------------------
+mark_as_resolved.php called at 2025-05-19 17:35:13
+User ID: TX009 X4449
+Raw input: {"transaction_id":"TRNSC 0033"}
+Transaction ID: TRNSC 0033
+User ID: TX009 X4449
+Started database transaction
+User info: Array
+(
+    [pub_id] => TX009 X4449
+    [first_name] => Robert James
+    [last_name] => Nahial
+    [email] => 2301101444@student.buksu.edu.ph
+)
+
+Transaction data: Array
+(
+    [transaction_id] => TRNSC 0033
+    [pub_id] => TX009 X4449
+    [report_status] => Found
+    [claim_status] => Claimed
+    [user_respo] => TX010 X4450
+    [item_name] => Makeup Branded
+    [publisher_email] => 2301101444@student.buksu.edu.ph
+    [publisher_fname] => Robert James
+    [publisher_lname] => Nahial
+)
+
+Setting transaction_status='Resolved', transaction_date='2025-05-19'
+mark_as_resolved.php called at 2025-05-19 17:35:16
+Transaction updated successfully as resolved
+Transaction committed to database
+Sending success response: {"success":true,"message":"Item marked as resolved successfully"}
+mark_as_resolved.php completed
+----------------------------------------------
+User ID: TX009 X4449
+Raw input: {"transaction_id":"TRNSC 0033"}
+Transaction ID: TRNSC 0033
+User ID: TX009 X4449
+Started database transaction
+User info: Array
+(
+    [pub_id] => TX009 X4449
+    [first_name] => Robert James
+    [last_name] => Nahial
+    [email] => 2301101444@student.buksu.edu.ph
+)
+
+Transaction data: Array
+(
+    [transaction_id] => TRNSC 0033
+    [pub_id] => TX009 X4449
+    [report_status] => Found
+    [claim_status] => Claimed
+    [user_respo] => TX010 X4450
+    [item_name] => Makeup Branded
+    [publisher_email] => 2301101444@student.buksu.edu.ph
+    [publisher_fname] => Robert James
+    [publisher_lname] => Nahial
+)
+
+Setting transaction_status='Resolved', transaction_date='2025-05-19'
+Transaction updated successfully as resolved
+Transaction committed to database
+Sending success response: {"success":true,"message":"Item marked as resolved successfully"}
+mark_as_resolved.php completed
+----------------------------------------------
+mark_as_resolved.php called at 2025-05-19 17:53:08
+User ID: TX009 X4449
+Raw input: {"transaction_id":"TRNSC 0032"}
+Transaction ID: TRNSC 0032
+User ID: TX009 X4449
+Started database transaction
+User info: Array
+(
+    [pub_id] => TX009 X4449
+    [first_name] => Robert James
+    [last_name] => Nahial
+    [email] => 2301101444@student.buksu.edu.ph
+)
+
+Transaction data: Array
+(
+    [transaction_id] => TRNSC 0032
+    [pub_id] => TX009 X4449
+    [report_status] => Lost
+    [claim_status] => 
+    [user_respo] => 
+    [item_name] => Laptop
+    [publisher_email] => 2301101444@student.buksu.edu.ph
+    [publisher_fname] => Robert James
+    [publisher_lname] => Nahial
+)
+
+Setting transaction_status='Resolved', transaction_date='2025-05-19'
+Transaction updated successfully as resolved
+Transaction committed to database
+Sending success response: {"success":true,"message":"Item marked as resolved successfully"}
+mark_as_resolved.php completed
+----------------------------------------------
+mark_as_resolved.php called at 2025-05-19 18:08:35
+User ID: TX009 X4449
+Raw input: {"transaction_id":"TRNSC 0034"}
+Transaction ID: TRNSC 0034
+User ID: TX009 X4449
+Started database transaction
+User info: Array
+(
+    [pub_id] => TX009 X4449
+    [first_name] => ROBERT JAMES
+    [last_name] => NAHIAL
+    [email] => 2301101444@student.buksu.edu.ph
+)
+
+Transaction data: Array
+(
+    [transaction_id] => TRNSC 0034
+    [pub_id] => TX009 X4449
+    [report_status] => Lost
+    [claim_status] => 
+    [user_respo] => 
+    [item_name] => Brownie
+    [publisher_email] => 2301101444@student.buksu.edu.ph
+    [publisher_fname] => ROBERT JAMES
+    [publisher_lname] => NAHIAL
+)
+
+Setting transaction_status='Resolved', transaction_date='2025-05-19'
+Transaction updated successfully as resolved
+Transaction committed to database
+Sending success response: {"success":true,"message":"Item marked as resolved successfully"}
+mark_as_resolved.php completed
+----------------------------------------------
+mark_as_resolved.php called at 2025-05-19 18:10:35
+User ID: TX009 X4449
+Raw input: {"transaction_id":"TRNSC 0035"}
+Transaction ID: TRNSC 0035
+User ID: TX009 X4449
+Started database transaction
+User info: Array
+(
+    [pub_id] => TX009 X4449
+    [first_name] => ROBERT JAMES
+    [last_name] => NAHIAL
+    [email] => 2301101444@student.buksu.edu.ph
+)
+
+Transaction data: Array
+(
+    [transaction_id] => TRNSC 0035
+    [pub_id] => TX009 X4449
+    [report_status] => Found
+    [claim_status] => Claimed
+    [user_respo] => TX010 X4450
+    [item_name] => Eternal Sugar Cookie
+    [publisher_email] => 2301101444@student.buksu.edu.ph
+    [publisher_fname] => ROBERT JAMES
+    [publisher_lname] => NAHIAL
+)
+
+Setting transaction_status='Resolved', transaction_date='2025-05-19'
+mark_as_resolved.php called at 2025-05-19 18:10:39
+Transaction updated successfully as resolved
+Transaction committed to database
+Sending success response: {"success":true,"message":"Item marked as resolved successfully"}
+mark_as_resolved.php completed
+----------------------------------------------
+User ID: TX009 X4449
+Raw input: {"transaction_id":"TRNSC 0035"}
+Transaction ID: TRNSC 0035
+User ID: TX009 X4449
+Started database transaction
+User info: Array
+(
+    [pub_id] => TX009 X4449
+    [first_name] => ROBERT JAMES
+    [last_name] => NAHIAL
+    [email] => 2301101444@student.buksu.edu.ph
+)
+
+Transaction data: Array
+(
+    [transaction_id] => TRNSC 0035
+    [pub_id] => TX009 X4449
+    [report_status] => Found
+    [claim_status] => Claimed
+    [user_respo] => TX010 X4450
+    [item_name] => Eternal Sugar Cookie
+    [publisher_email] => 2301101444@student.buksu.edu.ph
+    [publisher_fname] => ROBERT JAMES
+    [publisher_lname] => NAHIAL
+)
+
+Setting transaction_status='Resolved', transaction_date='2025-05-19'
+Transaction updated successfully as resolved
+Transaction committed to database
+Sending success response: {"success":true,"message":"Item marked as resolved successfully"}
+mark_as_resolved.php completed
+----------------------------------------------

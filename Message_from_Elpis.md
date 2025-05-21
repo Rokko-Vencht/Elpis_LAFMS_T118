@@ -30,7 +30,7 @@ All of the files that are somewhat named near to the main php files are most lik
 styling, validation, and error handling (which is very crucial for the web system).
 
 ## How to install:
-We, the Team Elpis, has attached a manual document along with this repository. Please try to follow the instruction for
+We, the Team Elpis, has attached a manual document along with the system's resources. Please try to follow the instruction for
 an easy access. If you have any concerns, please don't hesitate to contact the owner of the repository :3. Fairly-well!
 
   
